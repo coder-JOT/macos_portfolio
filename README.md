@@ -41,4 +41,4 @@ It features a working Desktop environment, Window management system, and native-
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_GITHUB_USERNAME/macos-portfolio.git](https://github.com/YOUR_GITHUB_USERNAME/macos-portfolio.git)
+   git clone https://github.com/coder-JOT/macos_portfolio.git
