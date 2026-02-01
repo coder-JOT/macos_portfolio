@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 const FONT_WEIGHTS = {
-    subtitle: {min: 100, max:100, default:100},
+    subtitle: {min: 100, max: 600, default: 100},
     title: {min: 400, max: 900, default: 400},
 };
 
@@ -21,7 +21,7 @@ const renderText = (text, className, baseWeight = 400) => {
 };
 
 const setupTextHover = (container, type) => {
-    if(!container) return;
+    if(!container) return () => {};
 
     const letters = container.querySelectorAll("span");
     const {min, max, default: base} = FONT_WEIGHTS[type];
@@ -63,8 +63,8 @@ const Welcome = () => {
   const subtitleRef = useRef(null);
 
   useGSAP(() => {
-    const titleCleanup = setupTextHover(titleRef.current, 'title');
-    const subtitleCleanup = setupTextHover(subtitleRef.current, 'subtitle');
+    const titleCleanup = setupTextHover(titleRef.current, "title");
+    const subtitleCleanup = setupTextHover(subtitleRef.current, "subtitle");
     
     return () => {
         subtitleCleanup();
@@ -77,12 +77,12 @@ const Welcome = () => {
     <p ref={subtitleRef}>
         {renderText(
             "Hey, I'm Inderjot! Welcome to my",
-            'text-3xl font-georama',
+            "text-3xl font-georama",
             100,
         )}
     </p>
-    <h1 ref={titleRef} className='mt-7'>
-        {renderText("Portfolio", 'text-9xl italic font-georama', 400,)}
+    <h1 ref={titleRef} className="mt-7">
+        {renderText("Portfolio", "text-9xl italic font-georama")}
     </h1>
     <div className="small-screen">
         <p>This portfolio is designed for desktop/tablet 
