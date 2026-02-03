@@ -1,1 +1,4 @@
-export { default as Terminal } from "./Terminal";
+import Terminal from "#windows/Terminal.jsx";
+import Resume from "#windows/Resume.jsx";
+
+export { Terminal, Resume };
