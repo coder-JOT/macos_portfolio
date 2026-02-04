@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/draggable";
 
 import { Navbar, Welcome, Dock } from "#components"
-import { Terminal, Resume } from "#windows";
+import { Terminal, Resume, Finder } from "#windows";
 
 gsap.registerPlugin(Draggable);
 
@@ -14,6 +14,7 @@ const App = () => {
       <Dock />
       <Terminal/>
       <Resume />
+      <Finder />
     </main>
   )
 }
