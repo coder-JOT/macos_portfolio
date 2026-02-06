@@ -12,8 +12,8 @@ const Contact = () => {
     </div>
     <div className="p-5 space-y-5">
         <img 
-        src="/images/adrian.jpg" 
-        alt="Adrian" 
+        src="/images/inder.jpg" 
+        alt="InderJot" 
         className="w-20 rounded-full" 
         />
 
@@ -23,6 +23,7 @@ const Contact = () => {
             I'm in.
         </p>
         <p>er.inderjotsingh@gmail.com</p>
+        <p>+91 9877998375</p>
         <ul>
             {socials.map(({id, bg, link, icon, text}) => (
                 <li key={id} style={{ backgroundColor: bg }}>
